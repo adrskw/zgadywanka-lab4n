@@ -1,7 +1,3 @@
---
-Autor: 
---
-
 # zgadywanka-lab4n
 
 dwadwadwadwadwahrthtrf thr hgersger g
