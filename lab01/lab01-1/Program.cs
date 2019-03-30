@@ -24,13 +24,13 @@ namespace lab01_1
             Console.Write("Podaj wiek: ");
             int wiek = Convert.ToInt32(Console.ReadLine());
 
-            if(wiek < 67)
-            {
-                Console.WriteLine(" do emerytury zostało Ci {0} lat ", 67 - wiek);
-            }
-            else if(wiek < 0)
+            if(wiek < 0)
             {
                 Console.WriteLine("Błędne dane!");
+            }
+            else if(wiek < 67)
+            {
+                Console.WriteLine(" do emerytury zostało Ci {0} lat ", 67 - wiek);
             }
             else
             {
