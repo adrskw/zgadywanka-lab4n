@@ -96,6 +96,7 @@
             this.buttonOK.TabIndex = 6;
             this.buttonOK.Text = "Kliknij";
             this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // labelKomunikat1
             // 
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 233);
+            this.ClientSize = new System.Drawing.Size(226, 232);
             this.Controls.Add(this.labelKomunikat2);
             this.Controls.Add(this.labelKomunikat1);
             this.Controls.Add(this.buttonOK);
