@@ -19,18 +19,18 @@ namespace lab01_1
             string nazwisko = Console.ReadLine();
 
             Console.WriteLine("Witaj " + imie + " " + nazwisko);
-            Console.WriteLine("Witaj {0} {1}. Czy Pan {0} rzeczywiście nazwywa się {1}?", imie, nazwisko);
+            Console.WriteLine("Witaj {0} {1}. Czy Pan {0} rzeczywiście nazywa się {1}?", imie, nazwisko);
 
             Console.Write("Podaj wiek: ");
             int wiek = Convert.ToInt32(Console.ReadLine());
 
-            if(wiek < 67)
-            {
-                Console.WriteLine(" do emerytury zostało Ci {0} lat ", 67 - wiek);
-            }
-            else if(wiek < 0)
+            if(wiek < 0)
             {
                 Console.WriteLine("Błędne dane!");
+            }
+            else if(wiek < 67)
+            {
+                Console.WriteLine(" do emerytury zostało Ci {0} lat ", 67 - wiek);
             }
             else
             {
