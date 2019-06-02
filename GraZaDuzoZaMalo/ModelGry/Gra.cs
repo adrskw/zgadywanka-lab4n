@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ModelGry
 {
-    public class Gra
+    public partial class Gra
     {
         // subtypes
         public enum Odp { ZaMalo = -1, Trafiono = 0, ZaDuzo = 1 }
@@ -36,6 +37,7 @@ namespace ModelGry
 
             LicznikRuchow = 0;
             StanGry = State.Trwa;
+            historia = new List<Ruch>();
         }
         public static int Losuj(int min = 1, int max = 100)
         {
@@ -53,16 +55,20 @@ namespace ModelGry
         public Odp Ocena(int liczba)
         {
             LicznikRuchow++;
+            Odp odp;
 
             if (liczba < wylosowana)
-                return Odp.ZaMalo;
+                odp = Odp.ZaMalo;
             else if (liczba > wylosowana)
-                return Odp.ZaDuzo;
+                odp = Odp.ZaDuzo;
             else
             {
                 StanGry = State.Odgadnieta;
-                return Odp.Trafiono;
-            }                
+                odp = Odp.Trafiono;
+                historia.Add(new Ruch(liczba, odp));
+            }
+
+            return odp;
         }
 
         public void Poddaj()
