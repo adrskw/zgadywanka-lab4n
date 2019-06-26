@@ -17,7 +17,7 @@ namespace ModelGry
         {
             get
             {
-                if(StanGry == State.Poddana || StanGry == State.Odgadnieta) 
+                if (StanGry == State.Poddana || StanGry == State.Odgadnieta) 
                     return wylosowana;
                 else
                     return null;
