@@ -25,6 +25,8 @@ namespace ModelGry
         }
         public int LicznikRuchow { get; private set; }
         public State StanGry { get; private set; }
+        private int NrGryTmp = 0;
+        public static int NrGry { get; private set; } = 0;
 
         // constructors
         public Gra(int min, int max)
@@ -36,8 +38,9 @@ namespace ModelGry
             wylosowana = Losuj(ZakresOd, ZakresDo);
 
             LicznikRuchow = 0;
+            NrGryTmp = NrGry;
+            NrGry++;
             StanGry = State.Trwa;
-            historia = new List<Ruch>();
         }
         public static int Losuj(int min = 1, int max = 100)
         {
@@ -65,7 +68,6 @@ namespace ModelGry
             {
                 StanGry = State.Odgadnieta;
                 odp = Odp.Trafiono;
-                historia.Add(new Ruch(liczba, odp));
             }
 
             return odp;
@@ -75,9 +77,5 @@ namespace ModelGry
         {
             StanGry = State.Poddana;
         }
-
-        // historia gry
-
-        // auxiliary methods
     }
 }

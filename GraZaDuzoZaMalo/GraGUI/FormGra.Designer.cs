@@ -1,6 +1,6 @@
 ﻿namespace GraGUI
 {
-    partial class Form1
+    partial class FormGra
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonNowaGra = new System.Windows.Forms.Button();
             this.groupBoxLosuj = new System.Windows.Forms.GroupBox();
             this.buttonLosuj = new System.Windows.Forms.Button();
@@ -36,9 +37,12 @@
             this.textBoxZakresDo = new System.Windows.Forms.TextBox();
             this.textBoxZakresOd = new System.Windows.Forms.TextBox();
             this.groupBoxWylosowano = new System.Windows.Forms.GroupBox();
+            this.buttonHistoria = new System.Windows.Forms.Button();
+            this.time = new System.Windows.Forms.Label();
             this.buttonPoddajSie = new System.Windows.Forms.Button();
             this.buttonSprawdz = new System.Windows.Forms.Button();
             this.textBoxLiczba = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBoxLosuj.SuspendLayout();
             this.groupBoxWylosowano.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +69,7 @@
             this.groupBoxLosuj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBoxLosuj.Name = "groupBoxLosuj";
             this.groupBoxLosuj.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxLosuj.Size = new System.Drawing.Size(564, 114);
+            this.groupBoxLosuj.Size = new System.Drawing.Size(568, 112);
             this.groupBoxLosuj.TabIndex = 1;
             this.groupBoxLosuj.TabStop = false;
             this.groupBoxLosuj.Text = "Losowanie";
@@ -120,6 +124,7 @@
             // 
             // groupBoxWylosowano
             // 
+            this.groupBoxWylosowano.Controls.Add(this.time);
             this.groupBoxWylosowano.Controls.Add(this.buttonPoddajSie);
             this.groupBoxWylosowano.Controls.Add(this.buttonSprawdz);
             this.groupBoxWylosowano.Controls.Add(this.textBoxLiczba);
@@ -127,11 +132,30 @@
             this.groupBoxWylosowano.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBoxWylosowano.Name = "groupBoxWylosowano";
             this.groupBoxWylosowano.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxWylosowano.Size = new System.Drawing.Size(564, 202);
+            this.groupBoxWylosowano.Size = new System.Drawing.Size(570, 144);
             this.groupBoxWylosowano.TabIndex = 2;
             this.groupBoxWylosowano.TabStop = false;
             this.groupBoxWylosowano.Text = "Wylosowano liczbę. Odgadnij ją!";
             this.groupBoxWylosowano.Visible = false;
+            // 
+            // buttonHistoria
+            // 
+            this.buttonHistoria.Location = new System.Drawing.Point(449, 384);
+            this.buttonHistoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonHistoria.Name = "buttonHistoria";
+            this.buttonHistoria.Size = new System.Drawing.Size(133, 51);
+            this.buttonHistoria.TabIndex = 7;
+            this.buttonHistoria.Text = "Historia Gry";
+            this.buttonHistoria.UseVisualStyleBackColor = true;
+            this.buttonHistoria.Click += new System.EventHandler(this.buttonHistoria_Click);
+            // 
+            // time
+            // 
+            this.time.AutoSize = true;
+            this.time.Location = new System.Drawing.Point(458, 41);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(0, 17);
+            this.time.TabIndex = 6;
             // 
             // buttonPoddajSie
             // 
@@ -163,18 +187,23 @@
             this.textBoxLiczba.Size = new System.Drawing.Size(132, 22);
             this.textBoxLiczba.TabIndex = 0;
             // 
-            // Form1
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 644);
+            this.ClientSize = new System.Drawing.Size(599, 455);
+            this.Controls.Add(this.buttonHistoria);
             this.Controls.Add(this.groupBoxWylosowano);
             this.Controls.Add(this.groupBoxLosuj);
             this.Controls.Add(this.buttonNowaGra);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Gra ZaDużoZaMało";
             this.groupBoxLosuj.ResumeLayout(false);
             this.groupBoxLosuj.PerformLayout();
             this.groupBoxWylosowano.ResumeLayout(false);
@@ -196,5 +225,9 @@
         private System.Windows.Forms.TextBox textBoxLiczba;
         private System.Windows.Forms.Button buttonSprawdz;
         private System.Windows.Forms.Button buttonPoddajSie;
+        private System.Windows.Forms.Label time;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button buttonHistoria;
     }
 }
+
