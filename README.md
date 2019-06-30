@@ -1,17 +1,10 @@
 # zgadywanka-lab4n
 
-dwadwadwadwadwahrthtrf thr hgersger g
+Projekt realizowany na zajęciach Wprowadzenia do programowania
 
-## Rozdział 1
+## Sposób działania
 
-fwefhaqwodwjaijfawhj[ dawd [awdhoaw pawd
+Program losuje liczbę z podanego zakresu. Gracz ma za zadanie ją odgadnąć. Istnieje możliwość poddania się i podglądu historii rozegranych gier.
 
-## Rozdział 1.1
-
-adwad ersgr
-er gresg
-
-ersgsreg
-gresgerg
-
-
+Autor: Adrian Skwarczyński
+Nr indeksu: 11812
